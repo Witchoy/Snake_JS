@@ -8,7 +8,7 @@ A simple Snake game made with HTML, CSS, and vanilla JavaScript.
 - Score tracking
 
 ## 📷 Screenshot
-![Snake game screenshot](img/SnakeScreenShot.png "Snake game screenshot")
+![Snake game screenshot](img/SnakeGame.png "Snake game screenshot")
 
 ## How to Run
 

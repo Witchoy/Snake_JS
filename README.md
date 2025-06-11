@@ -1,5 +1,5 @@
 # 🐍 Snake_JS
-A simple Snake game made with HTML, CSS, and vanilla JavaScript.
+A simple Snake game made using HTML, CSS, and vanilla JavaScript.
 
 ## 🗒️ Features
 - Customizable grid size

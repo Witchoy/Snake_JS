@@ -1,8 +1,8 @@
 // Grid data
 const canvas = document.getElementById("grid");
 const ctx = canvas.getContext("2d");
-const cellSize = 25;
-const size = 10;
+let cellSize = 25;
+let size = 10;
 
 // Snake data
 let snake = [[2, 1], [1, 1]];
@@ -171,9 +171,27 @@ function gameOver() {
 
 // Start game loop
 function start() {
+    // Get grid size from input
+    size = parseInt(document.getElementById("gridSize").value);
+
+    if (isNaN(size) || size < 5 || size > 25) {
+        alert("Size must be a number between 5 and 25");
+        return;
+    }
+
+    // Recalculate cell size and resize canvas
+    cellSize = 250 / size;
+    canvas.width = 250;
+    canvas.height = 250;
+
+    // Disable UI controls
     document.getElementById("startButton").disabled = true;
     document.getElementById("speed-select").disabled = true;
+
+    // Reset game state now that size is set
     reset();
+
+    // Start game loop
     let speed = getSpeedValue();
     gameInterval = setInterval(gameLoop, speed);
 }

@@ -171,6 +171,7 @@ function gameOver() {
 
 // Start game loop
 function start() {
+    currentDir = 'Right';
     // Get grid size from input
     size = parseInt(document.getElementById("gridSize").value);
 
